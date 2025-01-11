@@ -828,6 +828,36 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Feature Items
+--------------------------------------------------------------*/
+.feature-box {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the icon and text */
+}
+
+.feature-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.feature-box p.description {
+  margin: 5px 0 0; /* Space between heading and description */
+  font-size: 14px; /* Smaller font size for the description */
+  color: var(--text-color); /* Consistent color with your design */
+  line-height: 1.4;
+  font-family: var(--default-font);
+}
+
+.bi-check {
+  font-size: 24px;
+  color: var(--accent-color); /* Icon color */
+}
+
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
@@ -1095,7 +1125,15 @@ section,
 .alt-features .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0; /* Add space between h4 and sub-heading */
+}
+
+.alt-features .icon-box h5.sub-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin: 0 0 10px 0; /* Space between sub-heading and paragraph */
+  font-family: var(--default-font);
 }
 
 .alt-features .icon-box i {
@@ -1110,6 +1148,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-bottom: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Services Section
