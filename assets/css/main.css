@@ -968,90 +968,179 @@ section,
 }
 
 /*--------------------------------------------------------------
-# About Section
+# About Section - New Text Area Style
 --------------------------------------------------------------*/
 .about .content {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  padding: 40px;
+  background: #ffffff; /* Clean white background */
+  padding: 40px; /* Keep original padding */
+  border-radius: 12px; /* Smooth corners for a modern look */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  position: relative;
+  border-left: 5px solid #007bff; /* Accent border on the left */
+}
+
+.about .content::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 123, 255, 0.05); /* Decorative circle */
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .about .content h3 {
-  font-size: 14px;
+  font-size: 12px; /* Reduced font size */
   font-weight: 700;
-  color: var(--accent-color);
   text-transform: uppercase;
+  letter-spacing: 1.2px; /* Subtle spacing for emphasis */
+  color: #007bff; /* Vibrant blue for contrast */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.about .content h3::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: #007bff; /* Accent line before text */
+  display: block;
 }
 
 .about .content h2 {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 20px; /* Reduced font size */
+  font-weight: 600;
+  color: #333333; /* Dark gray for readability */
+  line-height: 1.5;
+  margin: 15px 0 20px 0;
+  position: relative;
+  padding-left: 20px; /* Space for the decorative icon */
+}
+
+.about .content h2::before {
+  content: "⚡"; /* Decorative icon */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 18px; /* Icon size */
+  color: #007bff;
 }
 
 .about .content p {
-  margin: 15px 0 30px 0;
-  line-height: 24px;
+  margin: 15px 0 30px 0; /* Original margins */
+  font-size: 14px; /* Slightly reduced font size */
+  line-height: 1.8;
+  color: #555555; /* Neutral gray for text */
+  border-left: 3px solid #007bff; /* Decorative border */
+  padding-left: 15px; /* Spacing for readability */
 }
 
 .about .content .btn-read-more {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  line-height: 0;
-  padding: 15px 40px;
-  border-radius: 4px;
-  transition: 0.5s;
-  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient button */
+  padding: 12px 35px; /* Slightly reduced padding */
+  border-radius: 50px; /* Fully rounded button */
+  box-shadow: 0px 5px 20px rgba(0, 123, 255, 0.3); /* Button shadow */
+  font-size: 14px; /* Reduced font size */
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
 }
 
-.about .content .btn-read-more span {
-  font-family: var(--default-font);
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 1px;
+.about .content .btn-read-more:hover {
+  background: linear-gradient(135deg, #0056b3, #004aad); /* Darker gradient on hover */
+  box-shadow: 0px 8px 25px rgba(0, 123, 255, 0.4); /* Enhanced shadow */
+  transform: translateY(-3px); /* Lift effect */
 }
 
 .about .content .btn-read-more i {
-  margin-left: 5px;
-  font-size: 18px;
-  transition: 0.3s;
+  margin-left: 8px; /* Adjusted spacing */
+  font-size: 16px; /* Adjusted size */
+  transition: transform 0.3s ease;
 }
 
 .about .content .btn-read-more:hover i {
-  transform: translateX(5px);
+  transform: translateX(5px); /* Smooth arrow movement */
+}
+
+
+.about img {
+  max-width: 100%; /* Maintain the original size */
+  border-radius: 20px; /* Rounded corners */
+  border: 8px solid #ffffff; /* Clean white border */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  filter: grayscale(20%) contrast(1.2); /* Slight grayscale and contrast */
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease; /* Smooth effects */
+}
+
+.about img:hover {
+  transform: scale(1.05) rotate(-2deg); /* Dynamic zoom and tilt effect */
+  box-shadow: 0px 20px 40px rgba(173, 174, 228, 0.15); /* Enhanced shadow */
+  filter: grayscale(0%) contrast(1); /* Remove grayscale for vibrancy */
+  border: 8px solid #f1f2f3; /* Blue border on hover */
 }
 
 /*--------------------------------------------------------------
 # Values Section
 --------------------------------------------------------------*/
 .values .card {
-  background-color: var(--surface-color);
+  background: #ffffff; /* Pure white background */
   color: var(--default-color);
   padding: 30px;
-  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
   text-align: center;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
   height: 100%;
-  border: 0;
+  border-radius: 12px; /* Rounded corners for the card */
+  border: 1px solid #f0f0f0; /* Subtle border for structure */
 }
 
 .values .card img {
-  padding: 30px 50px;
-  transition: 0.5s;
-  transform: scale(1.1);
+  padding: 20px;
+  border-radius: 50%; /* Circular style for images */
+  border: 3px solid #e0e0e0; /* Soft border around images */
+  background: #fafafa; /* Light background for the image area */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for images */
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  transform: scale(1); /* Default scale */
 }
 
 .values .card h3 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
+  color: #333333; /* Dark gray for headings */
+}
+
+.values .card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666666; /* Neutral gray for descriptions */
+  margin-top: 10px;
 }
 
 .values .card:hover {
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1); /* Elevated shadow on hover */
+  border: 1px solid #e0e0e0; /* Slightly darker border on hover */
 }
 
 .values .card:hover img {
-  transform: scale(1);
+  transform: scale(1.1); /* Subtle zoom effect on hover */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
 }
+
+.values .card:hover h3 {
+  color: #004aad; /* Highlighted dark blue on hover */
+}
+
+
 
 /*--------------------------------------------------------------
 # Stats Section
