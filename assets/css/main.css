@@ -150,20 +150,18 @@ h6 {
   z-index: 997;
 }
 
-.header .logo {
-  line-height: 1;
-}
 
-.header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
-}
-
-.header .logo h1 {
-  font-size: 30px;
-  margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
+/* Text Styling */
+.header .logo .logo-text {
+  font-size: 25px; /* Small, clean text */
+  font-weight: 600; /* Semi-bold for emphasis */
+  color: #ffffff; /* White text for contrast */
+  letter-spacing: 1px; /* Slight letter spacing */
+  text-transform: uppercase; /* Professional uppercase look */
+  background: linear-gradient(90deg, #007BFF, #051661); /* Gradient background for text */
+  padding: 5px 10px; /* Padding around text */
+  border-radius: 20px; /* Rounded background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .header .btn-getstarted,
@@ -1091,54 +1089,79 @@ section,
 # Values Section
 --------------------------------------------------------------*/
 .values .card {
-  background: #ffffff; /* Pure white background */
+  background: linear-gradient(135deg, #ffffff, #f8f9fc); /* Gradient for a soft modern look */
   color: var(--default-color);
   padding: 30px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.07); /* Softer shadow for a clean aesthetic */
   text-align: center;
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
   height: 100%;
-  border-radius: 12px; /* Rounded corners for the card */
-  border: 1px solid #f0f0f0; /* Subtle border for structure */
+  border-radius: 16px; /* Smoother corners for a premium feel */
+  border: none; /* Removed borders for a minimalist look */
+  overflow: hidden; /* Prevent content overflow */
+  position: relative; /* To allow for pseudo-elements */
+}
+
+.values .card:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+  transform: rotate(45deg);
+}
+
+.values .card:hover:before {
+  opacity: 1;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 150%;
 }
 
 .values .card img {
-  padding: 20px;
-  border-radius: 50%; /* Circular style for images */
-  border: 3px solid #e0e0e0; /* Soft border around images */
-  background: #fafafa; /* Light background for the image area */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for images */
-  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  padding: 8px;
+
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
   transform: scale(1); /* Default scale */
 }
 
 .values .card h3 {
-  font-size: 22px;
+  font-size: 24px; /* Slightly larger for emphasis */
   font-weight: 700;
-  margin-bottom: 15px;
-  color: #333333; /* Dark gray for headings */
+  margin-bottom: 12px;
+  color: #212529; /* Darker gray for better contrast */
+  letter-spacing: 0.5px; /* Slight letter spacing for readability */
+  transition: color 0.3s ease;
 }
 
 .values .card p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #666666; /* Neutral gray for descriptions */
+  font-size: 15px; /* Slightly larger for better readability */
+  line-height: 1.8; /* More space for better flow */
+  color: #495057; /* Balanced gray for descriptions */
   margin-top: 10px;
 }
 
-.values .card:hover {
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1); /* Elevated shadow on hover */
-  border: 1px solid #e0e0e0; /* Slightly darker border on hover */
-}
+
 
 .values .card:hover img {
-  transform: scale(1.1); /* Subtle zoom effect on hover */
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+  transform: scale(1.1); /* Slightly more pronounced zoom effect */
+
 }
 
 .values .card:hover h3 {
-  color: #004aad; /* Highlighted dark blue on hover */
+  color: #0056d2; /* Vibrant blue for a dynamic hover state */
 }
+
+.values .card:hover p {
+  color: #333333; /* Darker text for better contrast */
+}
+
+
 
 
 
